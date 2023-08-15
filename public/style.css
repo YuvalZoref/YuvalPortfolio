@@ -15,9 +15,10 @@ body {
 #header{
   width: 100%;
   height: 100vh;
-  /* background-image: url(images/yuval1.jpg);
-  background-size: cover;
-  background-position: center; */
+  background-image: url(images/yuval3.png);
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .container{
   padding: 16px 6%;
