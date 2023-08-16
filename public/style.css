@@ -1,5 +1,7 @@
 @import "./css/header.css";
 @import "./css/about.css";
+@import "./css/services.css";
+@import "./css/portfolio.css";
 
 *{
   margin: 0;
