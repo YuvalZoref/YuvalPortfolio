@@ -25,9 +25,64 @@
         </div>
       </div>
     </div>
+    <!-- =================about================ -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/yuval1.jpg">
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About me</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod officiis itaque, quidem vitae fugit sequi nobis ut voluptas aperiam laudantium cum ipsum reprehenderit quasi mollitia, dicta eveniet. Repudiandae, natus cum?</p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('experience')">Experience</p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>Full stack</span><br>Software development</li>
+                <li><span>Web</span><br>Development</li>
+                <li><span>Edit</span><br>This later on</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li><span>Experience</span><br>Some experience</li>
+                <li><span>Experience</span><br>Some experience</li>
+                <li><span>Experience</span><br>Some experience</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>2022</span><br>LeWagon London</li>
+                <li><span>2018</span><br>TEFL academy</li>
+                <li><span>2013</span><br>Cambridge performing arts</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 
-    <script src="./bundle.js"></script>
+    <script>
+      const tablinks = document.getElementsByClassName("tab-links");
+      const tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabName){
+        for(const tablink of tablinks){
+          tablink.classList.remove("active-link");
+        }
+        for(const tabcontent of tabcontents){
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabName).classList.add("active-tab");
+      }
+    </script>
   </body>
 </html>
