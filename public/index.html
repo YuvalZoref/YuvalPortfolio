@@ -13,15 +13,18 @@
       <div class="container">
         <nav class="nav">
           <img src="images/name-logo2.png" class="logo">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fas fa-xmark" onclick="closemenu()"></i>
           </ul>
+          <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
-          <p>Web Developer</p>
+          <p>Web Development</p>
           <h1>Hi, I'm <span>Yuval</span><br>Zoref from London</h1>
         </div>
       </div>
@@ -38,7 +41,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod officiis itaque, quidem vitae fugit sequi nobis ut voluptas aperiam laudantium cum ipsum reprehenderit quasi mollitia, dicta eveniet. Repudiandae, natus cum?</p>
 
             <div class="tab-titles">
-              <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
               <p class="tab-links" onclick="opentab('experience')">Experience</p>
               <p class="tab-links" onclick="opentab('education')">Education</p>
             </div>
@@ -125,15 +128,36 @@
       </div>
     </div>
     <!-- --------------- contact ----------------- -->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa-solid fa-envelope"></i>yuval_zoref@hotmail.com</p>
+            <p><i class="fa-solid fa-phone"></i>+447880256012</p>
+            <div class="social-icons">
+              <a href="https://github.com/YuvalZoref" target=”_blank” ><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.instagram.com/yuvalzoref91/" target=”_blank” ><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/yuvalzoref" target=”_blank” ><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <a href="images/yuvalCv.pdf" download class="btn">Download CV</a>
+          </div>
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required>
+              <input type="email" name="Email" placeholder="Your Email" required>
+              <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+              <button type="submit" class="btn">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <p>Thank you for checking out my site  <i class="fa-solid fa-heart"></i><a href="#"> Click here</a>  to go Back to the top</p>
 
-
-
-
-
-
-
-
-
+      </div>
+    </div>
 
 
 
@@ -142,16 +166,45 @@
       const tablinks = document.getElementsByClassName("tab-links");
       const tabcontents = document.getElementsByClassName("tab-contents");
 
-      function opentab(tabName){
-        for(const tablink of tablinks){
+      function opentab(tabname){
+        for(tablink of tablinks){
           tablink.classList.remove("active-link");
         }
-        for(const tabcontent of tabcontents){
+        for(tabcontent of tabcontents){
           tabcontent.classList.remove("active-tab");
         }
         event.currentTarget.classList.add("active-link");
-        document.getElementById(tabName).classList.add("active-tab");
+        document.getElementById(tabname).classList.add("active-tab");
       }
+    </script>
+    <script>
+      const sidemenu = document.getElementById("sidemenu")
+
+      function openmenu(){
+        sidemenu.style.right = "0"
+      }
+      function closemenu(){
+        sidemenu.style.right = "-200px"
+      }
+    </script>
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbyC2Vl_qbKq4DoUIjRKXKIOucjWUNeou-Bvj2Nq9EgQN8wIjyetXySMBgYhbVaUssgF/exec"
+      const form = document.forms['submit-to-google-sheet']
+      const msg = document.getElementById("msg")
+
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimout(function(){
+              msg.innerHTML = ""
+            },5000)
+            form.reset()
+
+          })
+          .catch(error => console.error('Error!', error.message))
+      })
     </script>
   </body>
 </html>
