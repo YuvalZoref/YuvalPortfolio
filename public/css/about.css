@@ -23,13 +23,16 @@
   color: #fff;
   margin-bottom: 20px;
 }
+.about-text{
+  font-size: 18px;
+}
 .tab-titles{
   display: flex;
   margin: 20px 0 40px;
 }
 .tab-links{
   margin-right: 50px;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 500;
   cursor: pointer;
   position: relative;
@@ -52,8 +55,8 @@
   margin: 10px 0;
 }
 .tab-contents ul li span {
-  color: #b75f2c;
-  font-size: 20px;
+  color: #D96522;
+  font-size: 22px;
 }
 .tab-contents{
   display: none;
@@ -78,7 +81,10 @@
     font-size: 14px;
   }
   .tab-links{
-    font-size: 16px;
+    font-size: 20px;
     margin-right: 20px;
+  }
+  .tab-contents ul li span{
+    font-size: 18px;
   }
 }
