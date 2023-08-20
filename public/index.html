@@ -16,7 +16,7 @@
           <ul id="sidemenu">
             <li><a href="#header">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#contact">Contact</a></li>
             <i class="fas fa-xmark" onclick="closemenu()"></i>
@@ -24,8 +24,8 @@
           <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
-          <p>Web Development</p>
-          <h1>Hi, I'm <span>Yuval</span><br>Zoref from London</h1>
+          <p>Web Developer</p>
+          <h1>Hey, I'm <span>Yuval</span><br>Zoref from London</h1>
         </div>
       </div>
     </div>
@@ -38,64 +38,65 @@
           </div>
           <div class="about-col-2">
             <h1 class="sub-title">About me</h1>
-            <p class="about-text">I have a professional background in acting and musical theatre which i
-              have been working self employed for the past ten years. However, I am
-              now looking at having a career change and moving into the tech industry
-              as a full-stack developer. I recently completed the Le Wagon London 25-
-              week bootcamp in web/software development and am now planning on
-              continuing to learn new programming languages and frameworks in the
-              hope that i can transition in to a role as a software developer full time.
+            <p class="about-text">I have a professional background in acting and musical theatre which is
+              the industry i have been working in for the past ten years since graduating from drama school in Cambridge. I am
+              now however looking at having a career change and moving into the tech industry
+              as a front-end or full-stack developer. Last year i completed the Le Wagon London 25-
+              week bootcamp in web/software development and have been
+              continuing to learn and look into new programming languages and frameworks ever since. This is in the
+              hope that i can transition in to a role as a junior developer full time.
               </p>
 
             <div class="tab-titles">
-              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+              <p class="tab-links" onclick="opentab('skills-list')">Abilities</p>
               <p class="tab-links" onclick="opentab('experience')">Experience</p>
-              <p class="tab-links" onclick="opentab('education')">Education</p>
             </div>
-            <div class="tab-contents active-tab" id="skills">
+            <div class="tab-contents active-tab" id="education">
               <ul>
-                <li><span>Back End</span><br>Ruby on Rails</li>
-                <li><span>Front End</span><br>HTML, CSS, Javascript</li>
-                <li><span>Other libraries, extensions & frameworks</span><br>SQL, Sass, Bootstrap, OOP</li>
+                <li><span>2022 LeWagon London</span><br>Full stack web development bootcamp</li>
+                <li><span>2018 TEFL academy</span><br>Level 5 Certificate in Teaching English as a
+                  Foreign Language</li>
+                <li><span>2013 Cambridge performing arts</span><br>Level 6 HND in musical theatre</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="skills-list">
+              <ul>
+                <li><span>Developer</span><br>Full stack web development and web design for landing pages</li>
+                <li><span>Stage</span><br>Musical theatre training for singing, dancing & acting</li>
+                <li><span>Teaching</span><br>English as a foreign language & musical theatre workshops</li>
               </ul>
             </div>
             <div class="tab-contents" id="experience">
               <ul>
-                <li><span>Experience</span><br>Some experience</li>
-                <li><span>Experience</span><br>Some experience</li>
-                <li><span>Experience</span><br>Some experience</li>
-              </ul>
-            </div>
-            <div class="tab-contents" id="education">
-              <ul>
-                <li><span>2022</span><br>LeWagon London</li>
-                <li><span>2018</span><br>TEFL academy</li>
-                <li><span>2013</span><br>Cambridge performing arts</li>
+                <li><span>Third Space</span><br>Concierge/Duty manager (2019 > current)</li>
+                <li><span>Evita Westend/Tour</span><br>Actor (2016 > 2019)</li>
+                <li><span>Miss Saigon Westend</span><br>Actor (2015 > 2016)</li>
               </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- ----------- services ----------- -->
-    <div id="services">
+    <!-- ----------- skills ----------- -->
+    <div id="skills">
       <div class="container">
-        <h1 class="sub-title">My Services</h1>
-        <div class="services-list">
+        <h1 class="sub-title">Skills</h1>
+        <div class="skills-list">
+          <div>
+            <i class="fa-solid fa-laptop-code"></i>
+            <h2>Front End</h2>
+            <p>Knowledge of HTML and CSS with the use of Javascript to build functions. I have also been learning React in my own time as i want to make pages i design even smoother and more functional.</p>
+          </div>
+          <div>
+            <i class="fa-brands fa-css3"></i>
+            <h2>Back End</h2>
+            <p>Ruby & Ruby on Rails is the predominant language i have learned due to the bootcamp. I have dabbled a little in to Python also but only at a basic level.</p>
+          </div>
           <div>
             <i class="fa-solid fa-code"></i>
-            <h2>Web Designer</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum vitae veniam praesentium! Dolor placeat, sit voluptate at accusamus aliquid quos id minus tempora alias quod dolorem amet quisquam soluta sint.</p>
-          </div>
-          <div>
-            <i class="fa-solid fa-toilet-paper"></i>
-            <h2>Toilet cleaner</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum vitae veniam praesentium! Dolor placeat, sit voluptate at accusamus aliquid quos id minus tempora alias quod dolorem amet quisquam soluta sint.</p>
-          </div>
-          <div>
-            <i class="fa-solid fa-plane"></i>
-            <h2>Pilot</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum vitae veniam praesentium! Dolor placeat, sit voluptate at accusamus aliquid quos id minus tempora alias quod dolorem amet quisquam soluta sint.</p>
+            <h2>Other Software</h2>
+            <p>I have Used Sass and Bootstrap on projects to make my code more streamline on the Front-End. Also learning about about Object-oriented programming (OOP) and how to use Structured query language (SQL) with databases.</p>
           </div>
         </div>
       </div>
