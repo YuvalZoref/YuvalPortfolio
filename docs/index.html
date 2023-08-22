@@ -191,22 +191,20 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabName).classList.add("active-tab");
           }
+          </script>
+          <script>
+            //  ---------- menu for header ------------
+            const sidemenu = document.getElementById("sidemenu")
 
-
-
-          //  ---------- menu for header ------------
-
-          const sidemenu = document.getElementById("sidemenu")
-
-          function openmenu(){
-            sidemenu.style.right = "0"
-          }
-          function closemenu(){
-            sidemenu.style.right = "-200px"
-          }
-
+            function openmenu(){
+              sidemenu.style.right = "0"
+            }
+            function closemenu(){
+              sidemenu.style.right = "-200px"
+            }
+        </script>
+        <script>
           //  ---------- contact email --------------
-
 
           const scriptURL = "https:script.google.com/macros/s/AKfycbyC2Vl_qbKq4DoUIjRKXKIOucjWUNeou-Bvj2Nq9EgQN8wIjyetXySMBgYhbVaUssgF/exec"
           const form = document.forms['submit-to-google-sheet']
@@ -224,8 +222,6 @@
               })
               .catch(error => console.error('Error!', error.message))
           })
-
         </script>
-
     </body>
   </html>
