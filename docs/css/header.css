@@ -40,7 +40,7 @@ nav ul li a::after{
   content: '';
   width: 0%;
   height: 3px;
-  background: #ac470d;
+  background: #D96522;
   position: absolute;
   left: 0;
   bottom: -6px;
@@ -83,10 +83,11 @@ nav .fas{
   #sidemenu li a{
     color: #e3e3e3;
   }
+  nav ul li a::after{
+    background: #e3e3e371;
+  }
   nav ul{
-    /* background-image: linear-gradient(#ac470d, #ac470df7); */
-    /* border-radius: 10px; */
-    background: #ac470d;
+    background: #b34a0e;
     color: #e3e3e3;
     position: fixed;
     top: 0;
