@@ -40,7 +40,7 @@ nav ul li a::after{
   content: '';
   width: 0%;
   height: 3px;
-  background: #D96522;
+  background: #ac470d;
   position: absolute;
   left: 0;
   bottom: -6px;
@@ -80,12 +80,19 @@ nav .fas{
     display: block;
     font-size: 25px;
   }
+  #sidemenu li a{
+    color: #e3e3e3;
+  }
   nav ul{
-    background: #c25b20;
+    /* background-image: linear-gradient(#ac470d, #ac470df7); */
+    /* border-radius: 10px; */
+    background: #ac470d;
+    color: #e3e3e3;
     position: fixed;
     top: 0;
-    right: -200px;
-    width: 200px;
+    right: -150px;
+    width: 150px;
+    /* height: calc(100vh - 55%); */
     height: 100vh;
     padding-top: 50px;
     z-index: 2;

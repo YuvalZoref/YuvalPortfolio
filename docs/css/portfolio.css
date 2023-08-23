@@ -63,3 +63,14 @@
 .project:hover .layer{
   height: 100%;
 }
+
+@media only screen and (max-width:600px){
+  .layer {
+    font-size: 12px;
+  }
+  .project img{
+    margin: 10px 0;
+    border-radius: 10px;
+    object-fit: contain;
+  }
+}
